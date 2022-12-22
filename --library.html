@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./--library.css">
+</head>
+
+<body>
+    <header>
+        <div class="header__logo">
+            Library
+        </div>
+        <div class="header__menu">
+            <a href="#typewritter">Typewritter</a>
+            <a href="#modal">Modal</a>
+            <a href="#acordion&tabs">Acordion and Tabs</a>
+            <a href="#gallery--a">Gallery A</a>
+            <a href="#gallery--b">Gallery B</a>
+            <a href="#slider--a">Slider A</a>
+            <a href="#slider--b">Slider B</a>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav__menu">
+            <h3>Navigation</h3>
+            <p>example</p>
+            <p>example</p>
+            <p>example</p>
+        </div>
+        <div class="nav__button" onclick="showNav()">
+            <p>open</p>
+        </div>
+    </nav>
+
+    <button class="theme-button">
+        change <br> theme
+    </button>
+
+    <section id="typewritter">
+        <div class="typewritter__container container">
+            <div class="container__title">
+                <h2 class="section__title">Typewritter</h2>
+                <p class="section__subtitle">example</p>
+            </div>
+            <a href="" class="typewrite" data-period="2000" data-type='[ "Library.", "Typewritter." ]'>
+                <span class="wrap"></span>
+            </a>
+        </div>
+    </section>
+
+    <section id="modal">
+        <div class="modal__container container">
+            <div class="container__title">
+                <h2 class="section__title">Modal</h2>
+                <p class="section__subtitle">example</p>
+            </div>
+            <div class="modal__card">
+                <button class="modal__open modal__button">
+                    open
+                </button>
+            </div>
+        </div>
+        <div class="modal__content">
+            <div class="modal__card">
+                <button class="modal__close modal__button">
+                    close
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="acordion&tabs">
+        <div class="acordion__container container">
+            <div class="container__title">
+                <h2 class="section title">Acordion and Tabs</h2>
+                <p class="section__subtitle">example</p>
+            </div>
+
+            <div class="tab__button first" onclick="openTabContent(0)">first</div>
+            <div class="tab__button second" onclick="openTabContent(1)">second</div>
+            <div class="tab__content first">
+                <h3>first</h3>
+                <div class="acordion__pack">
+                    <div class="acordion__title">
+                        <div class="acordion__arrow">&gt;</div>
+                        <div class="acordion__link">example</div>
+                    </div>
+                    <div class="acordion__content">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                </div>
+                <div class="acordion__pack">
+                    <div class="acordion__title">
+                        <div class="acordion__arrow">&gt;</div>
+                        <div class="acordion__link">example</div>
+                    </div>
+                    <div class="acordion__content">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                </div>
+            </div>
+            <div class="tab__content second">
+                <h3>second</h3>
+                <div class="acordion__pack">
+                    <div class="acordion__title">
+                        <div class="acordion__arrow">&gt;</div>
+                        <div class="acordion__link">example</div>
+                    </div>
+                    <div class="acordion__content">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                </div>
+                <div class="acordion__pack">
+                    <div class="acordion__title">
+                        <div class="acordion__arrow">&gt;</div>
+                        <div class="acordion__link">example</div>
+                    </div>
+                    <div class="acordion__content">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                </div>
+                <div class="acordion__pack">
+                    <div class="acordion__title">
+                        <div class="acordion__arrow">&gt;</div>
+                        <div class="acordion__link">example</div>
+                    </div>
+                    <div class="acordion__content">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery--a">
+        <div class="gallery--a__container container">
+            <div class="container__title">
+                <h2 class="section__title">
+                    Gallery A
+                </h2>
+                <p class="section__subtitle">example</p>
+            </div>
+
+            <div class="gallery__slider">
+                <div class="gallery__prev" onclick="moveGalleryA(-1)"></div>
+                <div class="gallery__main"></div>
+                <div class="gallery__next" onclick="moveGalleryA(1)"></div>
+            </div>
+            <div class="gallery__orders">
+                <div class="gallery__dot" style="background-image: url('./order1.svg');" onclick="currentGalleryA(1)">
+                </div>
+                <div class="gallery__dot" style="background-image: url('./order2.svg');" onclick="currentGalleryA(2)">
+                </div>
+                <div class="gallery__dot" style="background-image: url('./order3.svg');" onclick="currentGalleryA(3)">
+                </div>
+                <div class="gallery__dot" style="background-image: url('./order4.svg');" onclick="currentGalleryA(4)">
+                </div>
+                <div class="gallery__dot" style="background-image: url('./order5.svg');" onclick="currentGalleryA(5)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery--b">
+        <div class="gallery--b__container container">
+            <div class="container__title">
+                <h2 class="section__title">
+                    Gallery B
+                </h2>
+                <p class="section__subtitle">example</p>
+            </div>
+
+            <div class="gallery__slider">
+                <div class="gallery__prev" onclick="moveGalleryB(-1)"> prev </div>
+                <div class="gallery__main"></div>
+                <div class="gallery__next" onclick="moveGalleryB(1)"> next </div>
+            </div>
+            <div class="gallery__orders">
+                <div class="gallery__dot" style="background-image: url('./order1.svg');" onclick="currentGalleryB(1)">
+                </div>
+                <div class="gallery__dot" style="background-image: url('./order2.svg');" onclick="currentGalleryB(2)">
+                </div>
+                <div class="gallery__dot" style="background-image: url('./order3.svg');" onclick="currentGalleryB(3)">
+                </div>
+                <div class="gallery__dot" style="background-image: url('./order4.svg');" onclick="currentGalleryB(4)">
+                </div>
+                <div class="gallery__dot" style="background-image: url('./order5.svg');" onclick="currentGalleryB(5)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slider--a">
+        <div class="slider--a__container container">
+            <div class="container__title">
+                <h2 class="section__title">Slider A</h2>
+                <p class="section__subtitle">example</p>
+            </div>
+
+            <div class="slider__pack pack--a">
+                <div class="slider__wrapper--a wrapper--a">
+                    <img src="./order1.svg" alt="" class="slide__img element--a">
+                    <img src="./order2.svg" alt="" class="slide__img element--a">
+                    <img src="./order3.svg" alt="" class="slide__img element--a">
+                    <img src="./order4.svg" alt="" class="slide__img element--a">
+                    <img src="./order5.svg" alt="" class="slide__img element--a">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slider--b">
+        <div class="slider--b__container container">
+            <div class="container__title">
+                <h2 class="section__title">Slider B</h2>
+                <p class="section__subtitle">example</p>
+            </div>
+
+            <div class="slider__pack">
+                <div class="slider__wrapper--b slider">
+                    <div class="slider__box wrapper">
+                        <img src="./order1.svg" alt="" class="slide__img element">
+                        <img src="./order2.svg" alt="" class="slide__img element">
+                        <img src="./order3.svg" alt="" class="slide__img element">
+                        <img src="./order4.svg" alt="" class="slide__img element">
+                        <img src="./order5.svg" alt="" class="slide__img element">
+                    </div>
+                </div>
+            </div>
+            <div class="slider__buttons">
+                <button class="slider__button prev">prev</button>
+                <button class="slider__button next">next</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer__box">
+            <h3>example</h3>
+            <div class="footer__link">
+                <div class="footer__arrow">&gt;</div>
+                <div class="footer__name">parrable</div>
+                <div class="footer__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="footer__close">X</div>
+                </div>
+            </div>
+            <div class="footer__link">
+                <div class="footer__arrow">&gt;</div>
+                <div class="footer__name">parrable</div>
+                <div class="footer__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="footer__close">X</div>
+                </div>
+            </div>
+            <div class="footer__link">
+                <div class="footer__arrow">&gt;</div>
+                <div class="footer__name">parrable</div>
+                <div class="footer__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="footer__close">X</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__box">
+            <h3>example</h3>
+            <div class="footer__link">
+                <div class="footer__arrow">&gt;</div>
+                <div class="footer__name">parrable</div>
+                <div class="footer__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="footer__close">X</div>
+                </div>
+            </div>
+            <div class="footer__link">
+                <div class="footer__arrow">&gt;</div>
+                <div class="footer__name">parrable</div>
+                <div class="footer__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="footer__close">X</div>
+                </div>
+            </div>
+            <div class="footer__link">
+                <div class="footer__arrow">&gt;</div>
+                <div class="footer__name">parrable</div>
+                <div class="footer__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="footer__close">X</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__box">
+            <h3>example</h3>
+            <div class="footer__link">
+                <div class="footer__arrow">&gt;</div>
+                <div class="footer__name">parrable</div>
+                <div class="footer__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="footer__close">X</div>
+                </div>
+            </div>
+            <div class="footer__link">
+                <div class="footer__arrow">&gt;</div>
+                <div class="footer__name">parrable</div>
+                <div class="footer__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="footer__close">X</div>
+                </div>
+            </div>
+            <div class="footer__link">
+                <div class="footer__arrow">&gt;</div>
+                <div class="footer__name">parrable</div>
+                <div class="footer__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="footer__close">X</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./--library.js?v=6"></script>
+</body>
+
+</html>
